@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <title>HNGx Projects</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <div>
+          <h6>About</h6>
+          <h3 data-testId="slackUserName">Anyaegbunam Chigozirm (chigozirim)</h3>
+        </div>
+        <img src="/assets/images/chigozirim-1.jpg" alt="chigozirim" data-testid="slackDisplayImage" class="profile-image">
+      </header>
+      <section>
+
+        <h6>Today</h6>
+        <p data-testid="currentDayOfTheWeek" id="day">Today is Monday Eleventh day of September 2023</p>
+
+        <h6>UTC Milliseconds</h6>
+        <p data-testid="currentUTCTime" id="time">14:23</p>
+
+        <h6>Track</h6>
+        <p data-testId="myTrack" id="track">Frontend</p>
+      </section>
+
+    </main>
+    <script>
+      const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday",
+      "Friday", "Saturday"];
+      const day = new Date();
+      const dayElem = document.getElementById("day")
+      const timeElem = document.getElementById("time")
+      dayElem.innerText = dayNames[day.getDay()]
+      
+      timeElem.innerText = day.getUTCMilliseconds()
+      
+    </script>
+  </body>
+</html>
